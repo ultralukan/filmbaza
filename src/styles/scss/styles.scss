@@ -1,0 +1,47 @@
+$background: #edf5e1;
+$green: rgb(63, 129, 67);
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+body{
+    background: $background;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, .head-nav{
+    display: inline-block;
+}
+
+.red{
+    color: red;
+}
+
+.head-nav{
+    position: relative;
+    left:400px;
+}
+
+.green{
+    background-color: $green;
+}
+
+.film{
+    border: 5px solid $green;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 20px 20px;
+    font-size: 25px;
+    overflow:hidden
+}
+.film-img{
+    height: 400px;
+    margin-top: -35px;
+    float: left;
+    margin-right: 50px;
+}
+.film h3{
+    text-align: center;
+}

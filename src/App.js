@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./Header";
+import './styles/scss/styles.scss'
+import Main from './Main'
+import Footer from "./Footer";
+import {useState} from 'react'
+
 
 function App() {
+  const [page, setPage] = useState(1);
+  const IncreasePage = ()=> {
+    setPage(page+1)
+  }
+  const DecreasePage = ()=> {
+    setPage(page-1)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header/>
+      <Main page={page}/>
+      <Footer page={page} IncreasePage={() => IncreasePage} DecreasePage={() => DecreasePage}/>
+    </>
   );
 }
 
